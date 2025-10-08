@@ -1,0 +1,45 @@
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Runtime data
+.env
+.DS_Store
+*.seed
+*.log
+*.pid
+*.sock
+
+# Editor/IDE specific files
+.idea/
+.vscode/
+.history/
+*.sublime-project
+*.sublime-workspace
+
+# Build artifacts
+dist/
+build/
+coverage/
+tmp/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Test files
+*.spec.js
+*.test.js
+*.snap
+
+# Other common files to ignore
+.nyc_output/
+.npm/
+.eslintcache
+.prettierrc.local
