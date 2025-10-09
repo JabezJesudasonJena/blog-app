@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
+const connnectDB = require('./config/config');
 
 const app = express();
 dotenv.config();
@@ -7,6 +8,8 @@ dotenv.config();
 
 // Middlewares - The things I will be going to use 
 app.use(express.json());
+dotenv.config();
+connnectDB();
 
 // port Define
 const PORT = process.env.PORT || 5000;
