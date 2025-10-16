@@ -12,7 +12,7 @@ app.use(express.json());
 
 dotenv.config();
 connnectDB();
-app.use('/api/posts')
+app.use('/api/posts', postRoutes)
 // port Define
 const PORT = process.env.PORT || 5000;
 
