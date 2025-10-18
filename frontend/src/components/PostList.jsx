@@ -33,9 +33,9 @@ const PostList = () => {
     
 
     return (
-        <div className="container mx-auto p-4">  
-            <h1>Blog Posts</h1>
-            <div>
+        <div className="container mx-auto p-4 flex justify-center flex-col items-center">  
+            <h1 className="font-bold text-sky-300">Blog Posts</h1>
+            <div >
                 {posts.map( post => (
                     <div key={post.id}>
                         <h2>{post.title}</h2>
