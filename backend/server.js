@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const connnectDB = require('./config/config');
 const postRoutes = require('./routes/postRoutes');
+const cors = require('cors')
 
 const app = express();
 dotenv.config();
@@ -9,6 +10,7 @@ dotenv.config();
 
 // Middlewares - The things I will be going to use 
 app.use(express.json());
+app.use(cors())
 
 dotenv.config();
 connnectDB();

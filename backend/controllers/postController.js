@@ -22,6 +22,7 @@ const createPost = async (req, res) => {
             content,
         });
         res.status(201).json(post);
+        //console.log(post)
     } catch (err) {
         res.status(500).json({message : "Server Error"})
     }
