@@ -15,7 +15,7 @@ const CreatePost = () => {
 
         try {
             const newPost = {title, content};
-            await axios.post('https://blog-app-hhoi.onrender.com/api/posts', newPost);
+            await axios.post('http://localhost:5000/api/posts', newPost);
 
             alert('Post Created Succesfully ! ');
             console.log(newPost)
