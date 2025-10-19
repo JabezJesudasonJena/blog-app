@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 
 
@@ -38,7 +39,10 @@ const PostList = () => {
             <div >
                 {posts.map( post => (
                     <div key={post.id}>
-                        <h2>{post.title}</h2>
+                        <Link to={`/posts/${post._id}`}>
+                            <h2>{post.title}</h2>
+                            <h2>{console.log(post._id)}</h2>
+                        </Link>
                         <h2>{post.content}</h2>
                     </div>
                 ))}
