@@ -39,7 +39,7 @@ const PostList = () => {
             <div >
                 {posts.map( post => (
                     <div key={post.id}>
-                        <Link to={`/posts/${post._id}`}>
+                        <Link to={`/allposts/${post._id}`}>
                             <h2>{post.title}</h2>
                             <h2>{console.log(post._id)}</h2>
                         </Link>
