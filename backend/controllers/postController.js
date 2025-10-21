@@ -50,14 +50,35 @@ const deletePost = async (req, res ) => {
         if (post) {
             await post.deleteOne();
             res.json({message : "Post Deleted "})
-    
-        } else {
-            res.status(404).json({message : "The Post cannot be deleted ! "})
+            console.log("Post : " + post.id + "  Deleted ")
+        } else {   
+            res.status(404).json({message : "The Post cannot be deleted ! "});
         }
     } catch (error) {
         console.log("There was some error")
     }
 }
+
+const updatePost = async (req,res) => {
+    try {
+        const {title, content} = req.body;
+        const post = await Post.findById(req.params.id);
+
+        if (post) {
+            post.title = title || post.title;
+            post.content = content || post.content;
+
+            const updatePost = await post.save();
+            res.json(updatePost);
+            console.log("The Post which I have edited : " + updatePost)
+        } else {
+            res.status(404).json({message : "Post not Found ! "});
+        }
+    } catch (error) {
+        console.log( "Error in 'updatePost'" + error );
+    }
+}
+
 module.exports = {
     getAllPosts,
     createPost,
