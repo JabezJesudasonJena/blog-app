@@ -1,6 +1,7 @@
 import './App.css'
 import PostList from './components/PostList'
 import CreatePost  from './components/CreatePost'
+import PostPage from './pages/PostPage'
 import {Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -9,6 +10,8 @@ function App() {
       <Routes>
         <Route path='/create-post' element={<CreatePost/>}/>
         <Route path='/allposts' element={<PostList/>}/>
+        <Route path='/allposts/:id' element={<PostPage/>}/>
+        <Route path='/editpost/:id' element={<PostPage/>}/>
       </Routes>
     </div>
   )
